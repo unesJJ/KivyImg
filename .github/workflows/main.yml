@@ -39,6 +39,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
+          wget http://launchpadlibrarian.net/666841698/libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb &&
+          sudo apt install ./libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb
           sudo apt-get install -y \
             build-essential \
             git \
@@ -79,9 +81,8 @@ jobs:
             cmake \
             libffi-dev \
             libssl-dev \
-            automake &&
-            wget http://launchpadlibrarian.net/666841698/libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb &&
-            sudo apt install ./libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb
+            automake
+
 
       # Set up Java 17 required by Gradle
       - name: Setup Java 17 required by Gradle
