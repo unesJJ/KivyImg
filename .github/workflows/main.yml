@@ -76,11 +76,12 @@ jobs:
             pkg-config \
             libncurses5-dev \
             libncursesw5-dev \
-            libtinfo.so.5\
             cmake \
             libffi-dev \
             libssl-dev \
-            automake
+            automake &&
+            wget http://launchpadlibrarian.net/666841698/libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb &&
+            dpkg -i libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb
 
       # Set up Java 17 required by Gradle
       - name: Setup Java 17 required by Gradle
