@@ -81,7 +81,7 @@ jobs:
             cmake \
             libffi-dev \
             libssl-dev \
-            automake
+             automake
 
 
       # Set up Java 17 required by Gradle
