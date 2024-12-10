@@ -104,7 +104,7 @@ jobs:
             automake &&
             sudo apt update
             wget http://launchpadlibrarian.net/666841698/libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb
-            dpkg -i libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb
+            sudo dpkg -i libtinfo5_6.1-1ubuntu1.18.04.1_i386.deb
 
       # Set up Java 17 required by Gradle
       - name: Setup Java 17 required by Gradle
